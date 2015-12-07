@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MrBearing/MrBearing.iml" filepath="$PROJECT_DIR$/MrBearing/MrBearing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YuichiroSato/YuichiroSato.iml" filepath="$PROJECT_DIR$/YuichiroSato/YuichiroSato.iml" />
+      <module fileurl="file://$PROJECT_DIR$/akeboshi/akeboshi.iml" filepath="$PROJECT_DIR$/akeboshi/akeboshi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/amatubu2525/amatubu2525.iml" filepath="$PROJECT_DIR$/amatubu2525/amatubu2525.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle.iml" filepath="$PROJECT_DIR$/gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intptr-t/intptr-t.iml" filepath="$PROJECT_DIR$/intptr-t/intptr-t.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mikan/mikan.iml" filepath="$PROJECT_DIR$/mikan/mikan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/s-hosoai/s-hosoai.iml" filepath="$PROJECT_DIR$/s-hosoai/s-hosoai.iml" />
+    </modules>
+  </component>
+</project>

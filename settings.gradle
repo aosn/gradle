@@ -1,0 +1,9 @@
+rootProject.name = 'gradle'
+include 'mikan'
+include 'MrBearing'
+include 'YuichiroSato'
+include 'intptr-t'
+include 's-hosoai'
+include 'akeboshi'
+include 'amatubu2525'
+

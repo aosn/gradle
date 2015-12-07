@@ -1,0 +1,7 @@
+.gradle
+.idea/copyright/*
+!.idea/copyright/profiles_settings.xml
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/workspace.xml
