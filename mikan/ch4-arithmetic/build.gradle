@@ -1,0 +1,50 @@
+apply plugin: 'java'
+
+def defaultEncoding = 'UTF-8'
+compileJava.options.encoding = defaultEncoding
+
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	testCompile "junit:junit:4.11"
+}
+
+compileJava {
+	options.fork = true
+	options.compilerArgs << '-Xlint:unchecked'
+}
+
+task native2ascii << {
+	ant.native2ascii(src: 'src/main/resources',
+	dest: processResources.destinationDir,
+	encoding: 'MS932')
+}
+
+jar {
+	baseName	= 'example'
+	appendix	= 'bin'
+	version		= '0.1'
+	classifier	= 'jdk17'
+	archiveName	= 'example.jar'
+	manifest {
+		attributes(
+			'Implementation-Title': 'Arithmetic Lib',
+			'Implementation-Version': version,
+			'Commit-Id': 'foo')
+	}
+}
+
+javadoc {
+	destinationDir = file("${buildDir}/dist/javadoc")
+	title = 'example library V0.1'
+	options.charSet = defaultEncoding
+	options.encoding = defaultEncoding
+	options.links << 'http://docs.oracle.com/javase/jp/7/api/'
+}
