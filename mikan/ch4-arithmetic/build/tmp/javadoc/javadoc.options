@@ -1,9 +1,0 @@
--charset 'UTF-8'
--classpath 'D:\\Projects\\Gradle\\aosn\\ch4-arithmetic\\build\\classes\\main;D:\\Projects\\Gradle\\aosn\\ch4-arithmetic\\build\\resources\\main'
--d 'D:\\Projects\\Gradle\\aosn\\ch4-arithmetic\\build\\dist\\javadoc'
--doctitle 'example library V0.1'
--encoding 'UTF-8'
--link 'http://docs.oracle.com/javase/jp/7/api/'
--quiet 
--windowtitle 'example library V0.1'
-'D:\\Projects\\Gradle\\aosn\\ch4-arithmetic\\src\\main\\java\\com\\example\\util\\BasicArithmeticOperations.java'
