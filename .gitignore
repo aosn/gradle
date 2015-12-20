@@ -1,5 +1,7 @@
 */.gradle
 */build
+.gradle
+build
 .idea/copyright/*
 !.idea/copyright/profiles_settings.xml
 .idea/compiler.xml
