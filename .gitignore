@@ -4,6 +4,7 @@
 build
 .idea/copyright/*
 !.idea/copyright/profiles_settings.xml
+.idea/libraries
 .idea/compiler.xml
 .idea/gradle.xml
 .idea/misc.xml
