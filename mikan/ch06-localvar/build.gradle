@@ -1,0 +1,24 @@
+def message = 'ローカル変数'
+String stringMessage = 'ローカル変数'
+assert message == stringMessage
+
+import java.sql.Timestamp
+
+def date = new Date()
+//date = new Date()
+Timestamp ts = new Timestamp(date.getTime())
+
+println ts
+
+def scriptScope = 'SCRIPT'
+task getMessage << {
+  def taskScope = 'TASK'
+  if (taskScope) {
+    def localScope = 'LOCAL'
+    println scriptScope + ':' + taskScope + ':' + localScope
+  }
+}
+
+println scriptScope
+//println taskScope // error occurred
+//println localScope // error occurred
