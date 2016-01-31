@@ -1,0 +1,12 @@
+class MyTaskExecutionListener implements TaskExecutionListener{
+  void beforeExecute(Task task){
+    println '**'+ task.name + 'タスクを実行します'
+  }
+
+  void afterExecute(Task task,TaskState state){
+    if(state.getExecuted()){
+      println '**'+ task.name + 'タスクが実行されました'
+    }
+  }
+}
+gradle.addListener(new MyTaskExecutionListener())
