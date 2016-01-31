@@ -1,0 +1,35 @@
+class MyTaskExecutionListener implements TaskExecutionListener {
+  void beforeExecute(Task task) {
+    println '[BUILD.GRADLE] ** ' + task.name + ' タスクを実行します。 **'
+  }
+  void afterExecute(Task task, TaskState state) {
+    if (state.getExecuted()) {
+      println '[BUILD.GRADLE] ** ' + task.name + ' タスクが実行されました。 **'
+    }
+  }
+}
+gradle.addListener(new MyTaskExecutionListener())
+
+gradle.settingsEvaluated {
+  println '[BUILD.GRADLE] 1. settingsEvaluated'
+}
+
+gradle.projectsLoaded {
+  println '[BUILD.GRADLE] 2. projectsLoaded'
+}
+
+gradle.beforeProject {
+  println '[BUILD.GRADLE] 3. beforeProject'
+}
+
+gradle.afterProject {
+  println '[BUILD.GRADLE] 4. afterProject'
+}
+
+gradle.projectsEvaluated {
+  println '[BUILD.GRADLE] 5. projectsEvaluated'
+}
+
+gradle.buildFinished {
+  println '[BUILD.GRADLE] 6. buildFinished'
+}

@@ -1,3 +1,5 @@
 println 'おやぷろじぇくと'
-def childInstance = project(':child')
-childInstance.description = '子プロジェクトの説明を設定します。'
+if (parent == null) {
+  def childInstance = project(':child')
+  childInstance.description = '子プロジェクトの説明を設定します。'
+}
