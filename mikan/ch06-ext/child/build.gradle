@@ -1,0 +1,13 @@
+if (ext.has('hoge')) {
+  println '[CHILD] ext.hoge: ' + ext.hoge
+} else {
+  println '[CHILD] ext.hoge: null'
+}
+
+if (parent != null) {
+  if (parent.ext.has('hoge')) {
+    println '[CHILD] parent.ext.hoge: ' + parent.ext.hoge
+  } else {
+    println '[CHILD] parent.ext.hoge: null'
+  }
+}

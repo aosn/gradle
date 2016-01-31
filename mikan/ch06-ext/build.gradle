@@ -1,0 +1,2 @@
+ext.hoge = 'プロパティ'
+println '[OYA] ext.hoge を追加しました。'
