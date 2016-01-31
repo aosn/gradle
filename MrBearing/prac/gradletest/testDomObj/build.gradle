@@ -1,0 +1,19 @@
+println 'デフォルトの依存関係：'
+repositories.each{ println it.name }
+println ''
+repositories{
+  mavenCentral()
+  jcenter()
+  mavenLocal()
+}
+
+
+println 'Mavent Central リポジトリ追加後'
+repositories.each{println it.name}
+
+
+
+def clousre = { mavenCentral() }
+this.repositories(clousre)
+RepositoryHandler repos = this.getRepositories()
+repos.mavenCentral()

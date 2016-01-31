@@ -1,0 +1,53 @@
+apply plugin: 'java'
+
+def defaultEncoding = 'UTF-8'
+compileJava.options.encoding = defaultEncoding
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+import org.apache.tools.ant.filters.EscapeUnicode
+
+//
+repositories{
+  mavenCentral()
+}
+
+//add junit4
+dependencies{
+  testCompile "junit:junit:4.11"
+}
+
+compileJava{
+  options.fork = true
+  options.compilerArgs << "-Xlint:unchecked"
+
+  //options.bootClasspath = '/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/jre/lib/rt.jar'
+}
+
+processResources{
+  filter(EscapeUnicode)
+}
+
+jar{
+  baseName = 'example'
+  appendix = 'bin'
+  version =  '0.1'
+  classifier = 'jdk17'
+
+  manifest {
+    attributes (
+      'Implementation-Title': 'Arithmetic Lib',
+      'Implementation-Version': version,
+      'Commit-Id': 'fooo')
+
+  }
+
+}
+
+javadoc {
+  options.charSet = 'UTF-8'
+  options.encoding = 'UTF-8'
+  destinationDir = reporting.file("${buildDir}/dist/javadoc")
+
+  title = 'example library V0.1'
+}

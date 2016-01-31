@@ -1,0 +1,9 @@
+task greet << {
+  println System.properties['message']
+  println message
+}
+/*
+task greetMessage << {
+  println System.properties['ext']
+}
+*/
