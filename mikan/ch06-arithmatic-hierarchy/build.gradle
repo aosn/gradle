@@ -14,7 +14,14 @@ subprojects {
 }
 
 // ライブラリプロジェクト
-project(':arithmetic-lib') {}
+project(':arithmetic-lib') {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    testCompile 'junit:junit:4.12'
+  }
+}
 
 // アプリケーションプロジェクト
 project(':arithmetic-main') {
@@ -23,8 +30,13 @@ project(':arithmetic-main') {
   mainClassName = 'com.example.cli.SimpleCalc'
   applicationName = 'SimpleCalc'
 
+  repositories {
+    jcenter()
+  }
+
   dependencies {
     compile project(':arithmetic-lib')
+    testCompile 'junit:junit:4.12'
   }
 
   run {
