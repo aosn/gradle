@@ -1,0 +1,20 @@
+subprojects {
+  apply plugin: 'java'
+
+  def defaultEncoding = 'UTF-8'
+  compileJava.options.encoding = defaultEncoding
+
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
+
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    testCompile 'junit:junit:4.12'
+  }
+
+  javadoc {
+    options.links << 'http://docs.oracle.com/javase/jp/7/api'
+  }
+}
