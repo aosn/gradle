@@ -23,6 +23,18 @@ subprojects {
   }
 }
 
+project(':arithmetic-main') {
+  commonTask {
+    doFirst {
+      println '=' * 20 + " ${name} start " + '=' * 20
+    }
+    doLast {
+      println '=' * 20 + " ${name} end " + '=' * 20
+    }
+    dependsOn ':arithmetic-lib:limitedTask'
+  }
+}
+
 project(':arithmetic-lib') {
   task limitedTask << {
     println project.name + '専用のタスクです。'
