@@ -3,6 +3,9 @@ machine:
     Asia/Tokyo
   java:
     version: oraclejdk8
+checkout:
+  post:
+    - chmod +x ./gradlew
 test:
   override:
     - ./gradlew clean build
